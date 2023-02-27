@@ -1,6 +1,8 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController as PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('homepage');
+// Route::get('/', function () {
+//     return view('home');
+// })->name('homepage');
+
+Route::get('/',[PageController::class,'index'])->name('homepage');
 
 Route::get('/comics',function(){
     $fumetti = config('db');

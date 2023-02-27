@@ -32,9 +32,18 @@
         </div>
     </div>
 </div>
-<div>
-    <h3>Art By {{$single['artists']}}</h3>
-    <h3>ciao{{$single['writers']}}</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h5>Art By: {{$single['artists']}}</h5>
+            <h5>Written By: {{$single['writers']}}</h5>
+        </div>
+        <div class="col-6">
+            <h5>Series: {{$single['series']}}</h5>
+            <h5>U.S. Price: {{$single['price']}}</h5>
+            <h5>On Sale Date: {{$single['sale_date']}}</h5>
+        </div>
+    </div>
 </div>
 
 

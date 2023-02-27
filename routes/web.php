@@ -31,15 +31,17 @@ Route::get('/',[PageController::class,'index'])->name('homepage');
 
 Route::get('/comics',[ComicController::class,'index'])->name('fumetti');
 
-Route::get('/comics/{id}',function($id){
-    $fumetti = config('db');
-    $single = '';
-    foreach($fumetti as $key => $item){
-        if($key == $id){
-            $single = $item;
-        }
-    };
+// Route::get('/comics/{id}',function($id){
+//     $fumetti = config('db');
+//     $single = '';
+//     foreach($fumetti as $key => $item){
+//         if($key == $id){
+//             $single = $item;
+//         }
+//     };
 
-    return view('detail_comics',compact('single'));
+//     return view('detail_comics',compact('single'));
 
-})->name('detail_comics');
+// })->name('detail_comics');
+
+Route::get('/comics/{id}', [ComicController::class,'show'])->name('detail_comics');

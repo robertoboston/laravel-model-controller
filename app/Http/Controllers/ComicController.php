@@ -12,4 +12,17 @@ class ComicController extends Controller
         return view('comics',compact('fumetti'));
 
     }
+
+    public function show($id){
+        $comic = Comic::find($id);
+
+        $single = [
+            'single'=> $comic
+
+        ];
+
+        return view('detail_comics',$single);
+
+
+    }
 }

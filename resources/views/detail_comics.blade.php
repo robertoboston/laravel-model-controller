@@ -32,8 +32,10 @@
         </div>
     </div>
 </div>
-<div class="description">
-
-
+<div>
+    <h3>Art By {{$single['artists']}}</h3>
+    <h3>ciao{{$single['writers']}}</h3>
 </div>
+
+
 @endsection
